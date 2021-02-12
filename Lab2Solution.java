@@ -26,8 +26,8 @@ public class Lab2Solution {
         for(int i=0; i<num; i++) {
             arr[i] = (int)(Math.random() * 101);
             search[arr[i]] = true;
-            sum += arr[i];
         }
+        sum = sumArray(arr);
         System.out.println("The array is");
         System.out.println(Arrays.toString(arr));
         System.out.println("The sum of the array is " + sum);
@@ -44,6 +44,14 @@ public class Lab2Solution {
 
         System.out.println("Now searching using loop...");
         System.out.println(search(arr, num));
+    }
+
+    private static int sumArray(int[] arr) {
+        int sum = 0;
+        for(int n: arr) {
+            sum += n;
+        }
+        return sum;
     }
 
     private static String search(int[] arr, int num) {
